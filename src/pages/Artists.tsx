@@ -7,73 +7,73 @@ import { Badge } from '@/components/ui/badge';
 const artists = [
   {
     id: 1,
-    name: 'Yayoi Kusama',
-    genre: 'Installation',
-    country: 'Japan',
+    name: 'Яёй Кусама',
+    genre: 'Инсталляция',
+    country: 'Япония',
     image: 'https://cdn.poehali.dev/projects/11680e18-f76e-43d7-acb0-2e2c79865cf0/files/7b790f9c-e10c-4a62-8103-498d4eedbd0e.jpg',
-    bio: 'Known for infinity mirror rooms and polka dot motifs, Kusama has been a pioneer in contemporary art for over six decades.',
+    bio: 'Известна зеркальными комнатами бесконечности и мотивами в горошек. Кусама пионер современного искусства на протяжении шести десятилетий.',
     works: 45,
     exhibitions: 3
   },
   {
     id: 2,
-    name: 'Anish Kapoor',
-    genre: 'Sculpture',
-    country: 'UK',
+    name: 'Аниш Капур',
+    genre: 'Скульптура',
+    country: 'Великобритания',
     image: 'https://cdn.poehali.dev/projects/11680e18-f76e-43d7-acb0-2e2c79865cf0/files/abcf99c3-e618-42e6-ad56-034679ec856f.jpg',
-    bio: 'British-Indian sculptor known for large-scale public sculptures and innovative use of materials like Vantablack.',
+    bio: 'Британско-индийский скульптор, известный масштабными публичными скульптурами и инновационным использованием материалов.',
     works: 32,
     exhibitions: 2
   },
   {
     id: 3,
-    name: 'Ai Weiwei',
-    genre: 'Mixed Media',
-    country: 'China',
+    name: 'Ай Вэйвэй',
+    genre: 'Смешанная техника',
+    country: 'Китай',
     image: 'https://cdn.poehali.dev/projects/11680e18-f76e-43d7-acb0-2e2c79865cf0/files/291975c0-9d47-4eb1-9fc8-aea1d61a508a.jpg',
-    bio: 'Contemporary artist and activist whose work explores human rights, freedom of expression, and cultural identity.',
+    bio: 'Современный художник и активист, чьи работы исследуют права человека, свободу слова и культурную идентичность.',
     works: 58,
     exhibitions: 4
   },
   {
     id: 4,
-    name: 'Marina Abramović',
-    genre: 'Performance',
-    country: 'Serbia',
+    name: 'Марина Абрамович',
+    genre: 'Перформанс',
+    country: 'Сербия',
     image: 'https://cdn.poehali.dev/projects/11680e18-f76e-43d7-acb0-2e2c79865cf0/files/7b790f9c-e10c-4a62-8103-498d4eedbd0e.jpg',
-    bio: 'Pioneer of performance art, exploring the relationship between performer and audience through durational works.',
+    bio: 'Пионер перформанс-арта, исследующая взаимосвязь между исполнителем и зрителем через продолжительные работы.',
     works: 28,
     exhibitions: 2
   },
   {
     id: 5,
-    name: 'Olafur Eliasson',
-    genre: 'Installation',
-    country: 'Denmark',
+    name: 'Олафур Элиассон',
+    genre: 'Инсталляция',
+    country: 'Дания',
     image: 'https://cdn.poehali.dev/projects/11680e18-f76e-43d7-acb0-2e2c79865cf0/files/abcf99c3-e618-42e6-ad56-034679ec856f.jpg',
-    bio: 'Creates large-scale installations using light, water, and air to explore perception and environmental awareness.',
+    bio: 'Создаёт масштабные инсталляции с использованием света, воды и воздуха, исследуя восприятие и экологическое сознание.',
     works: 41,
     exhibitions: 3
   },
   {
     id: 6,
-    name: 'Kara Walker',
-    genre: 'Mixed Media',
-    country: 'USA',
+    name: 'Кара Уокер',
+    genre: 'Смешанная техника',
+    country: 'США',
     image: 'https://cdn.poehali.dev/projects/11680e18-f76e-43d7-acb0-2e2c79865cf0/files/291975c0-9d47-4eb1-9fc8-aea1d61a508a.jpg',
-    bio: 'Known for room-sized tableaux of cut-paper silhouettes exploring race, gender, and identity in American history.',
+    bio: 'Известна комнатными табло из вырезанных бумажных силуэтов, исследующих расу, гендер и идентичность в американской истории.',
     works: 36,
     exhibitions: 2
   }
 ];
 
-const genres = ['All', 'Installation', 'Sculpture', 'Mixed Media', 'Performance'];
+const genres = ['Все', 'Инсталляция', 'Скульптура', 'Смешанная техника', 'Перформанс'];
 
 const Artists = () => {
-  const [selectedGenre, setSelectedGenre] = useState('All');
+  const [selectedGenre, setSelectedGenre] = useState('Все');
   const [selectedArtist, setSelectedArtist] = useState<number | null>(null);
 
-  const filteredArtists = selectedGenre === 'All' 
+  const filteredArtists = selectedGenre === 'Все' 
     ? artists 
     : artists.filter(artist => artist.genre === selectedGenre);
 
@@ -88,16 +88,16 @@ const Artists = () => {
           </Link>
           <div className="hidden md:flex items-center gap-8">
             <Link href="/">
-              <a className="text-sm font-medium hover:text-accent transition-colors">Exhibitions</a>
+              <a className="text-sm font-medium hover:text-accent transition-colors">Выставки</a>
             </Link>
             <Link href="/artists">
-              <a className="text-sm font-medium text-accent">Artists</a>
+              <a className="text-sm font-medium text-accent">Художники</a>
             </Link>
-            <a href="#visit" className="text-sm font-medium hover:text-accent transition-colors">Visit</a>
-            <a href="#about" className="text-sm font-medium hover:text-accent transition-colors">About</a>
+            <a href="#visit" className="text-sm font-medium hover:text-accent transition-colors">Посетить</a>
+            <a href="#about" className="text-sm font-medium hover:text-accent transition-colors">О музее</a>
           </div>
           <Button variant="default" size="sm" className="hidden md:flex">
-            Get Tickets
+            Купить билет
           </Button>
           <button className="md:hidden">
             <Icon name="Menu" size={24} />
@@ -108,9 +108,9 @@ const Artists = () => {
       <section className="pt-32 pb-20 px-6">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16 animate-fade-in">
-            <h1 className="text-6xl md:text-7xl font-bold mb-6">Featured Artists</h1>
+            <h1 className="text-6xl md:text-7xl font-bold mb-6">Избранные художники</h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Explore the visionaries shaping contemporary art today
+              Познакомьтесь с визионерами, формирующими современное искусство
             </p>
           </div>
 
@@ -215,21 +215,21 @@ const Artists = () => {
                       <div className="text-3xl font-bold text-accent mb-2">
                         {artists.find(a => a.id === selectedArtist)!.works}
                       </div>
-                      <div className="text-sm text-muted-foreground">Works in Collection</div>
+                      <div className="text-sm text-muted-foreground">Работ в коллекции</div>
                     </div>
                     <div className="bg-secondary p-6 rounded-xl">
                       <div className="text-3xl font-bold text-accent mb-2">
                         {artists.find(a => a.id === selectedArtist)!.exhibitions}
                       </div>
-                      <div className="text-sm text-muted-foreground">Current Exhibitions</div>
+                      <div className="text-sm text-muted-foreground">Текущих выставок</div>
                     </div>
                   </div>
                   <div className="flex gap-4">
                     <Button size="lg" className="flex-1">
-                      View Works <Icon name="ArrowRight" size={18} className="ml-2" />
+                      Смотреть работы <Icon name="ArrowRight" size={18} className="ml-2" />
                     </Button>
                     <Button size="lg" variant="outline" className="flex-1">
-                      Learn More
+                      Подробнее
                     </Button>
                   </div>
                 </div>
@@ -245,39 +245,39 @@ const Artists = () => {
             <div>
               <h3 className="text-2xl font-bold mb-4">SFMOMA</h3>
               <p className="text-white/70 text-sm">
-                San Francisco Museum of Modern Art
+                Музей современного искусства Сан-Франциско
               </p>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Visit</h4>
+              <h4 className="font-semibold mb-4">Посещение</h4>
               <ul className="space-y-2 text-sm text-white/70">
-                <li><a href="#" className="hover:text-white transition-colors">Hours & Admission</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Getting Here</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Accessibility</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Group Visits</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Время и билеты</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Как добраться</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Доступность</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Групповые визиты</a></li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Explore</h4>
+              <h4 className="font-semibold mb-4">Исследуйте</h4>
               <ul className="space-y-2 text-sm text-white/70">
-                <li><Link href="/"><a className="hover:text-white transition-colors">Exhibitions</a></Link></li>
-                <li><Link href="/artists"><a className="hover:text-white transition-colors">Artists</a></Link></li>
-                <li><a href="#" className="hover:text-white transition-colors">Collection</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Events</a></li>
+                <li><Link href="/"><a className="hover:text-white transition-colors">Выставки</a></Link></li>
+                <li><Link href="/artists"><a className="hover:text-white transition-colors">Художники</a></Link></li>
+                <li><a href="#" className="hover:text-white transition-colors">Коллекция</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">События</a></li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Connect</h4>
+              <h4 className="font-semibold mb-4">Связаться</h4>
               <ul className="space-y-2 text-sm text-white/70">
-                <li><a href="#" className="hover:text-white transition-colors">Membership</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Newsletter</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Shop</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Support</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Членство</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Рассылка</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Магазин</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Поддержать</a></li>
               </ul>
             </div>
           </div>
           <div className="border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-white/60">© 2024 San Francisco Museum of Modern Art</p>
+            <p className="text-sm text-white/60">© 2024 Музей современного искусства Сан-Франциско</p>
             <div className="flex gap-6">
               <a href="#" className="text-white/60 hover:text-white transition-colors">
                 <Icon name="Instagram" size={20} />
